@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<!--
+  Custom bindings to be added to the final XJB file.  Note that all custom bindings will be appended to the end of the
+  final XJB file in alphabetic order.
+
+  The header will be stripped from your file, but the namespaces will be retained and added to the final XJB file.
+-->
+<jaxb:bindings
+        xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/jaxb http://java.sun.com/xml/ns/jaxb/bindingschema_2_0.xsd"
+        jaxb:extensionBindingPrefixes="xjc"
+        version="2.1">
+
+
+    <jaxb:globalBindings typesafeEnumMaxMembers="1000">
+        <xjc:javaType name="java.lang.String" xmlType="xs:IDREF" adapter="org.gtri.niem.IDREF_Adapter" />
+        <xjc:javaType name="org.gtri.niem.ListOfString" xmlType="xs:IDREFS" adapter="org.gtri.niem.IDREFS_Adapter" />
+    </jaxb:globalBindings>
+
+</jaxb:bindings>
